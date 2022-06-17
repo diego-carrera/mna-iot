@@ -54,7 +54,7 @@ while Connected != True:
 
       tempPayload = json.dumps({"Temperature": i})
       co2Payload = json.dumps({"CO2": j})
-      humPayload = json.dumps({"CO2": k})
+      humPayload = json.dumps({"Humidity": k})
 
       print("Publishing to topic {0} {1}".format(temp_tag, tempPayload))
       print("Publishing to topic {0} {1}".format(co2_tag, co2Payload))
