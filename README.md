@@ -1,5 +1,5 @@
 # Repo para los ejercicios de las practicas
 
-practica-mqtt
+Practica la sesión 16 Junio 2022
 
-la practica de la sesión 16 Junio 2022
+[practica-mqtt](/practica-mqtt)
