@@ -22,10 +22,13 @@ def on_connect(client, userdata, flags, rc):
   :param rc:
   :return:
   """
+  error_messages = {1:"Incorrect Protocol Version", 2: "Client identifier is incorrect", 3: "Server Unavailable", 4: "Username or Password is incorrect", 5: "Unauthorized Connection"}
   if rc == 0:
     print("Connected with result code " + str(rc))
     global Connected
     Connected = True
+  elif rc in error_messages.keys():
+    print(error_messages[rc], "Return code: " + str(rc))
   else:
     print("Bad connection Returned code=", rc)
     Connected = False
