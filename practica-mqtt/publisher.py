@@ -31,14 +31,14 @@ def on_connect(client, userdata, flags, rc):
     Connected = False
 
 Connected = False
-broker_address="broker.hivemq.com"
+broker_address="localhost"
 broker_port=1883
 
 temp_tag = "/MNA/IoT/Equipo43/Temp"
 hum_tag = "/MNA/IoT/Equipo43/Humedad"
 co2_tag = "/MNA/IoT/Equipo43/Co2"
 
-client = mqttClient.Client("ClienteEquipo43")
+client = mqttClient.Client("PublisherEquipo43")
 client.on_connect = on_connect
 client.connect(broker_address, broker_port)
 client.loop_start()

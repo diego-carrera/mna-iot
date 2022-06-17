@@ -23,16 +23,16 @@ def on_connect(client, userdata, flags, rc):
 
 
 def on_message(client, userdata, message):
-    print("Message received: {message.topic} - {message.payload}".format(message=message))
-    return
+  print("Message received: {message.topic} - {message.payload}".format(message=message))
+  return
 
 Connected = False
-broker_address="broker.hivemq.com"
+broker_address="10.10.0.104"
 broker_port=1883
 
-tag = "/MNA/IoT/CompProf/#"
+tag = "/MNA/IoT/Equipo43/#"
 
-client = mqttClient.Client("ClienteEquipo43")
+client = mqttClient.Client("SubscriberEquipo43")
 client.on_connect = on_connect
 client.on_message = on_message
 client.connect(broker_address, broker_port)
