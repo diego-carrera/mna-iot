@@ -1,3 +1,6 @@
+#!/usr/local/env python
+# -*- coding: utf-8 -*-
+
 import pika, sys, os
 
 def main():
@@ -7,7 +10,6 @@ def main():
   channel.queue_declare(queue='equipo43')
 
   def callback(ch, method, properties, body):
-    print(" [x] Recibí mensaje %r " % body)
     print(" [x] Recibí mensaje %r " % body.decode('UTF-8'))
 
   channel.basic_consume(queue='equipo43', on_message_callback=callback, auto_ack=True)
